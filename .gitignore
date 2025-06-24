@@ -1,0 +1,2 @@
+# Ignore all safetensors model weights
+*.safetensors

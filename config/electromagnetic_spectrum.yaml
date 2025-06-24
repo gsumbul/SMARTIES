@@ -1,0 +1,140 @@
+aerosol:
+  min_wavelength: 422
+  max_wavelength: 463
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B01 (aerosol)'
+  projection_idx: 0
+  agg_projections: []
+blue_1:
+  min_wavelength: 427
+  max_wavelength: 558
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B02 (blue)'
+  projection_idx: 1
+  agg_projections: []
+blue_2:
+  min_wavelength: 452
+  max_wavelength: 512
+  sensors: ['Landsat8-L2']
+  name: 'B2 (blue)' 
+  projection_idx: 18
+  agg_projections: [0, 1]
+blue_3:
+  min_wavelength: 430
+  max_wavelength: 545
+  sensors: ['RGB']
+  name: 'blue'
+  projection_idx: 2
+  agg_projections: []
+green_1:
+  min_wavelength: 466
+  max_wavelength: 620
+  sensors: ['RGB']
+  name: 'green'
+  projection_idx: 3
+  agg_projections: []
+green_2:
+  min_wavelength: 524
+  max_wavelength: 595
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B03 (green)'
+  projection_idx: 4
+  agg_projections: []
+red_1:
+  min_wavelength: 590
+  max_wavelength: 710
+  sensors: ['RGB']
+  name: 'red'
+  projection_idx: 5
+  agg_projections: []
+red_2:
+  min_wavelength: 634
+  max_wavelength: 696
+  sensors: ['SENTINEL2']
+  name: 'B04 (red)'
+  projection_idx: 6
+  agg_projections: []
+red_edge_1:
+  min_wavelength: 689
+  max_wavelength: 719
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B05 (red edge 1)'
+  projection_idx: 7
+  agg_projections: []
+red_edge_2:
+  min_wavelength: 726
+  max_wavelength: 755
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B06 (red edge 2)'
+  projection_idx: 8
+  agg_projections: []
+near_infrared_1:
+  min_wavelength: 728
+  max_wavelength: 938
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B08 (NIR 1)'
+  projection_idx: 9
+  agg_projections: []
+near_infrared_2:
+  min_wavelength: 761
+  max_wavelength: 802
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B07 (NIR 2)'
+  projection_idx: 10
+  agg_projections: []
+near_infrared_3:
+  min_wavelength: 843
+  max_wavelength: 886
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B8A (NIR 3)'
+  projection_idx: 11
+  agg_projections: []
+short_wave_infrared_1:
+  min_wavelength: 923
+  max_wavelength: 964
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B09 (SWIR water vapour)'
+  projection_idx: 12
+  agg_projections: []
+short_wave_infrared_2:
+  min_wavelength: 1345
+  max_wavelength: 1406
+  sensors: ['SENTINEL2-L1C']
+  name: 'B10 (SWIR circus)'
+  projection_idx: -1
+  agg_projections: []
+short_wave_infrared_3:
+  min_wavelength: 1516
+  max_wavelength: 1704
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B11 (SWIR 1)'
+  projection_idx: 13
+  agg_projections: []
+short_wave_infrared_4:
+  min_wavelength: 2002
+  max_wavelength: 2376
+  sensors: ['SENTINEL2-L1C', 'SENTINEL2-L2A']
+  name: 'B12 (SWIR 2)' 
+  projection_idx: 14
+  agg_projections: []
+thermal_infrared_1:
+  min_wavelength: 10600
+  max_wavelength: 11190
+  sensors: ['Landsat8-L2']
+  name: 'B10 (surface temperature)' 
+  projection_idx: 17
+  agg_projections: [14, 15]
+microwave_1:
+  min_wavelength: 5.5e7
+  max_wavelength: 5.6e7
+  sensors: ['SENTINEL1-GRD']
+  name: 'VV' 
+  projection_idx: 15
+  agg_projections: []
+microwave_2:
+  min_wavelength: 5.5e7
+  max_wavelength: 5.6e7
+  sensors: ['SENTINEL1-GRD']
+  name: 'VH' 
+  projection_idx: 16
+  agg_projections: []
