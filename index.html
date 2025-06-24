@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0P2B1V461S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0P2B1V461S');
+</script>
+
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="SMARTIES: Spectrum-Aware Multi-Sensor Auto-Encoder for Remote Sensing Images">
+  <meta property="og:title" content="SMARTIES"/>
+  <meta property="og:description" content="SMARTIES: Spectrum-Aware Multi-Sensor Auto-Encoder for Remote Sensing Images">
+  <meta property="og:url" content="https://gsumbul.github.io/smarties"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/logo.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="SMARTIES">
+  <meta name="twitter:description" content="SMARTIES: Spectrum-Aware Multi-Sensor Auto-Encoder for Remote Sensing Images">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/logo.png">
+  <meta name="twitter:card" content="static/images/spectra_fig.png">
+  <meta name="twitter:site" content="@gencersumbul">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="remote sensing, masked autoencoder, foundation model, multi-modal learning, earth observation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SMARTIES</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <!-- <script defer src="static/js/fontawesome.all.min.js"></script> -->
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <p>
+            <img class="blend-img-background center-image" src="static/images/logo.png" alt="SMARTIES"
+            style="max-width: 83%; height: auto;"/>
+          </p>
+          <h1 class="title is-1 publication-title">Spectrum-Aware Multi-Sensor Auto-Encoder for Remote Sensing Images</h1>
+          <div class="centered">
+            <div class="author-row">
+              <div class="col-4 text-center">
+                <a href="https://people.epfl.ch/gencer.sumbul" style="color:#B51F1F;" target="_blank"><img src="static/images/authors/sumbul.png" alt="Gencer Sumbul" class="">
+                  <p>Gencer Sumbul</p></a>
+              </div>
+              <div class="col-4 text-center">
+                <a href="https://chasel-tsui.github.io/Homepage/" style="color:#B51F1F;" target="_blank"><img src="static/images/authors/xu.png" alt="Chang Xu" class="">
+                  <p>Chang Xu</p></a>
+              </div>
+              <div class="col-4 text-center">
+                <a href="https://emanueledalsasso.github.io/" style="color:#B51F1F;" target="_blank"><img src="static/images/authors/dalsasso.png" alt="Emanuele Dalsasso" class="">
+                  <p>Emanuele Dalsasso</p></a>
+              </div>
+              <div class="col-4 text-center">
+                <a href="https://people.epfl.ch/devis.tuia" style="color:#B51F1F;" target="_blank"><img src="static/images/authors/tuia.png" alt="Devis Tuia" class="">
+                  <p>Devis Tuia</p></a>
+              </div>
+            </div>
+            <div class="is-size-6 publication-authors">
+              <a href="https://www.epfl.ch/en/" style="color:#B51F1F;">
+                <span class="author-block" style="color:#B51F1F;">Ecole Polytechnique Fédérale de Lausanne (EPFL)<br>
+                  <!-- Conferance name and year -->
+                </span>
+              </a>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/arxiv_id" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                    <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/ArXiv_logo_2022.svg" alt="arXiv" style="height:1em;vertical-align:middle;"> -->
+                  </span>
+                  <span>Preprint</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/gsumbul/SMARTIES" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <!-- Hugging Face link -->
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/gsumbul/smarties-685888bb5ecded3f802cc945" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Models" style="height:1em;vertical-align:middle;">
+                  </span>
+                  <span>Models</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser images--> 
+<section class="hero is-light" style="margin-top: -30px; background-color: white;">
+  <div class="container is-max-desktop" style="background-color: white;">
+    <div class="hero-body" style="background-color: white">
+      <!-- <p>
+        <img class="'blend-img-background center-image" src="static/images/sensor_fig.png" alt="Multi-sensor"
+        style="max-width: 80%; height: auto;"/>
+      </p> -->
+      <p>
+        <img class="'blend-img-background center-image" src="static/images/spectra_fig.png" alt="Multi-sensor"
+        style="max-width: 100%; height: auto;"/>
+      </p>
+      <h2 class="subtitle has-text-centered">
+        SMARTIES learns unified representations of multi-sensor remote sensing (RS) images by leveraging spectrum-aware projections, enabling scalability and generalization to diverse RS sensors with unseen ones in a zero-shot manner.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser images
+
+
+
+
+<!-- Key Features background-color: #faf2f2;-->
+<section class="hero is-light" id="features" style="padding: 60px 20px;"> 
+  <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2em; margin-bottom: 30px;">✨ Key Features</h2>
+    <p style="font-size: 1.1em; color: #555; margin-bottom: 40px;">
+      SMARTIES stands out from existing foundation models on several aspects:
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; text-align: left;">
+      <!-- Feature 1 -->
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.06);">
+        <h3 style="margin-top: 0;">🛰️ <b>Multi-Sensor Representations</b></h3>
+        <span>Enable sensor-agnostic processing of RS data (optical, radar and VHR RGB imagery), including unseen ones in a zero-shot manner.</span>
+      </div>
+      <!-- Feature 2 -->
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.06);">
+        <h3 style="margin-top: 0;">🌈 <b>Spectrum-Aware Projections</b></h3>
+        <p>Project data from heterogeneous sensors into a shared spectrum-aware space.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.06);">
+        <h3 style="margin-top: 0;">⚡ <b>Lightweight and Scalable</b></h3>
+        <p>Pretrain a simple yet effective model, demanding as little data as possible with similar complexity to MAE.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.06);">
+        <h3 style="margin-top: 0;">🔄 <b>Downstream Transfer</b></h3>
+        <p>Enable downstream transfer using a unified model across a diverse set of remote sensing sensors and tasks.</p>
+      </div>
+      <!-- Feature 5 -->
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); grid-column: 1 / span 2; width: 50%; margin: 0 auto;">
+        <h3 style="margin-top: 0;">🔀 <b>Flexible Band Combinations</b></h3>
+        <p>Use of arbitrary combinations of spectral bands for downstream purposes, enabling flexible remote sensing applications.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- End Key Features -->
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light" style="background-color: #ffffff;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            From optical sensors to microwave radars, leveraging the complementary strengths of remote sensing (RS) sensors is crucial for achieving dense spatio-temporal monitoring of our planet. In contrast, recent deep learning models, whether task-specific or foundational, are often specific to single sensors or to fixed combinations: adapting such models to different sensory inputs requires both architectural changes and re-training, limiting scalability and generalization across multiple RS sensors. On the contrary, a single model able to modulate its feature representations to accept diverse sensors as input would pave the way to agile and flexible multi-sensor RS data processing. To address this, we introduce SMARTIES, a generic and versatile foundation model lifting sensor-specific/dependent efforts and enabling scalability and generalization to diverse RS sensors: SMARTIES projects data from heterogeneous sensors into a shared spectrum-aware space, enabling the use of arbitrary combinations of bands both for training and inference. To obtain sensor-agnostic representations, we train a single, unified transformer model reconstructing masked multi-sensor data with cross-sensor token mixup. On both single- and multi-modal tasks across diverse sensors, SMARTIES outperforms previous models that rely on sensor-specific pretraining.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small" style="margin-top: -90px">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel" style="display: flex; flex-direction: row;">
+        <div class="item" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 500px;">
+          <!-- Your image here -->
+          <img src="static/images/model_fig.png" alt="Training pipeline" style="max-width: auto; max-height: 250px; display: block;"/>
+          <h2 class="subtitle has-text-centered">
+            SMARTIES lifts sensor-dependent efforts for multi-sensor RS image representation learning by leveraging: (1) spectrum-aware RS image projection; (2) cross-sensor token mixup; and (3) spectrum-aware RS image reconstruction.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 500px;">
+          <!-- Your image here -->
+          <img src="static/images/projection_fig.png" alt="Spectum-aware projections" style="max-width: auto; max-height: 300px; display: block;"/>
+          <h2 class="subtitle has-text-centered">
+            Spectrum-aware RS image projection and reconstruction illustrated on a pair of SAR and multispectral patches.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 500px;">
+          <!-- Your image here -->
+          <img src="static/images/unseen_inference.png" alt="Downstream transfer to unseen sensor" style="max-width: auto; max-height: 300px; display: block;"/>
+          <h2 class="subtitle has-text-centered">
+An example of downstream transfer to an unseen spectral band through interpolation. 
+\(\lambda^c_{10}\) and \(\lambda^{c}_{11}\) denote the centre wavelength of the NIR and SWIR bands seen during pretraining; 
+\(\lambda^{c}_{n}\) denotes the centre wavelength of a new, unseen spectral band.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" style="font-size: 2em; margin-bottom: 30px;"> 📊 Downstream Transfer & Evaluation</h2>
+<table style="margin: 0 auto; border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ccc; padding: 8px;">Dataset</th>
+      <th style="border: 1px solid #ccc; padding: 8px;">Task</th>
+      <th style="border: 1px solid #ccc; padding: 8px;">Evaluation Type</th>
+      <th style="border: 1px solid #ccc; padding: 8px;">Sensor(s) Used</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">BigEarthNetS2</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Multi-label Classification</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Fine-tuning</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Sentinel-2</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">BigEarthNetS1</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Multi-label Classification</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Linear Probing</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Sentinel-1</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">BigEarthNetMM</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Multi-Modal Multi-label Classification</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Linear Probing</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Sentinel-1, Sentinel-2</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">EuroSAT</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Scene Classification</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Fine-tuning</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Sentinel-2</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">EuroSAT</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Scene Classification</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Linear Probing</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Sentinel-2</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">EuroSAT</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Scene Classification</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">kNN</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Sentinel-2</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">RESISC-45</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Scene Classification</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Fine-tuning</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">RGB</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">WHU-RS19</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Scene Classification</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">kNN</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">RGB</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">UC-Merced</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Scene Classification</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">kNN</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">RGB</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">BurnScars</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Semantic Segmentation</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">UPerNet Probing</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">HLS</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">DynamicEarthNet</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Semantic Segmentation</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">UPerNet Probing</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Planet</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">SpaceNet7</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Semantic Segmentation</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">UPerNet Probing</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Planet</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">SICKLE</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Semantic Segmentation</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Non-linear Probing</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Landsat-8 (OLI, TIRS)</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">DFC2020</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Multi-Modal Semantic Segmentation</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Non-linear Probing</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Sentinel-1, Sentinel-2</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </div>
+</section>
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{smarties,
+  title={{SMARTIES}: Spectrum-Aware Multi-Sensor Auto-Encoder for Remote Sensing Images},
+  author={Gencer Sumbul and Chang Xu and Emanuele Dalsasso and Devis Tuia},
+  journal={arXiv preprint arXiv:arxiv_id},
+  year={2025}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer" style="font-size: 0.85em; text-align: center;">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-7">
+        <div class="content">
+          <p> 
+            SMARTIES is supported by the European Space Agency (ESA) through the Discovery and Preparation Program, and is part of the project <a href="https://activities.esa.int/4000144146" target="_blank">Toward a Foundation Model for Multi-Sensor Earth Observation Data with Language Semantics</a>.
+          </p>
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  <!-- End Google Analytics -->
+<!-- Default Statcounter code for SMARTIES
+https://gsumbul.github.io/smarties -->
+<script type="text/javascript">
+var sc_project=13146180; 
+var sc_invisible=1; 
+var sc_security="c89210e4"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/13146180/0/c89210e4/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+  </body>
+  </html>
