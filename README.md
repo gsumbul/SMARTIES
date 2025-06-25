@@ -3,15 +3,15 @@
 </p>
 
 # Spectrum-Aware Multi-Sensor Auto-Encoder for Remote Sensing Images
-[![arXiv](https://img.shields.io/badge/arXiv-2407.02413-b31b1b.svg)](https://arxiv.org/abs/arxiv_id)
+[![arXiv](https://img.shields.io/badge/arXiv-2407.02413-b31b1b.svg)](https://arxiv.org/abs/2506.19585)
 [![HuggingFace](https://img.shields.io/badge/-HuggingFace-3B4252?style=flat&logo=huggingface&logoColor=)](https://huggingface.co/collections/gsumbul/smarties-685888bb5ecded3f802cc945)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Python 3.10](https://img.shields.io/badge/Python%203.10-3776AB?logo=python&logoColor=FFF&style=flat)
 ![PyTorch 2.6.0](https://img.shields.io/badge/PyTorch-2.6.0-%23ee4c2c?logo=pytorch&logoColor=white)
-[![Website](https://img.shields.io/badge/website-blue?logo=google-chrome)](https://gsumbul.github.io/smarties)
+[![Website](https://img.shields.io/badge/website-blue?logo=google-chrome)](https://gsumbul.github.io/SMARTIES/)
 
 **News:**
- - [25/06/2025] [arXiv pre-print](https://arxiv.org/abs/arxiv_id) and [model weights](https://huggingface.co/collections/gsumbul/smarties-685888bb5ecded3f802cc945) are out!
+ - [25/06/2025] [arXiv pre-print](https://arxiv.org/abs/2506.19585) and [model weights](https://huggingface.co/collections/gsumbul/smarties-685888bb5ecded3f802cc945) are out!
 
 ## 🚀 Introduction
 
@@ -24,7 +24,7 @@ From optical sensors to microwave radars, leveraging the complementary strengths
 
 SMARTIES is a generic and versatile FM lifting sensor-dependent efforts and enabling scalability and generalization to diverse RS sensors: SMARTIES projects data from heterogeneous sensors into a shared spectrum-aware space, enabling the use of arbitrary combinations of bands both for training and inference. To obtain sensor-agnostic representations, SMARTIES was trained as a single, unified transformer model reconstructing masked multi-sensor data with cross-sensor token mixup, while modulating its feature representations to accept diverse sensors as input.
 
-The details of SMARTIES are described in our paper, available on [arXiv](https://arxiv.org/abs/2406.02413). The model weights of SMARTIES based on ViT-B and ViT-L encoders are available at our [<img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" width="20"/> Hugging Face Collection](https://huggingface.co/collections/gsumbul/smarties-685888bb5ecded3f802cc945).
+The details of SMARTIES are described in our paper, available on [arXiv](https://arxiv.org/abs/2506.19585). The model weights of SMARTIES based on ViT-B and ViT-L encoders are available at our [<img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" width="20"/> Hugging Face Collection](https://huggingface.co/collections/gsumbul/smarties-685888bb5ecded3f802cc945).
 
 **Direct links to pretrained models:**
 - [SMARTIES (ViT-B)](https://huggingface.co/gsumbul/SMARTIES-v1-ViT-B/blob/main/smarties-v1-vitb.safetensors)
@@ -208,7 +208,7 @@ If you use SMARTIES, please cite the paper:
 @article{smarties,
   title={{SMARTIES}: Spectrum-Aware Multi-Sensor Auto-Encoder for Remote Sensing Images},
   author={Gencer Sumbul and Chang Xu and Emanuele Dalsasso and Devis Tuia},
-  journal={arXiv preprint arXiv:arxiv_id},
+  journal={arXiv preprint arXiv:2506.19585},
   year={2025}
 }
 ```
