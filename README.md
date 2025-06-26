@@ -11,7 +11,8 @@
 [![Website](https://img.shields.io/badge/website-blue?logo=google-chrome)](https://gsumbul.github.io/SMARTIES/)
 
 **News:**
- - [25/06/2025] [arXiv pre-print](https://arxiv.org/abs/2506.19585) and [model weights](https://huggingface.co/collections/gsumbul/smarties-685888bb5ecded3f802cc945) are out!
+- [26/06/2025] SMARTIES has been accepted to [International Conference on Computer Vision (ICCV) 2025](https://iccv.thecvf.com/) 🎉
+- [25/06/2025] [arXiv pre-print](https://arxiv.org/abs/2506.19585) and [model weights](https://huggingface.co/collections/gsumbul/smarties-685888bb5ecded3f802cc945) are out!
 
 ## 🚀 Introduction
 
