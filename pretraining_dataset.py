@@ -29,7 +29,7 @@ class PretrainingPairsDataset(torch.utils.data.Dataset):
         self.patch_size = patch_size
         self.nb_patch_length = int(self.input_size / self.patch_size)
         self.projection_conversion = {i: spectrum_specs[i]['projection_idx'] for i in spectrum_specs}
-        self.bands = {sensor_specs[sensor]['sensor_idx']: np.array(sensor_specs[sensor]['bands']).astype('int')[np.array(sensor_specs[sensor]['selected_bands']).astype('int')] for sensor in sensor_specs}
+        self.bands = {sensor_specs[sensor]['sensor_idx']: np.array(sensor_specs[sensor]['bands'])[np.array(sensor_specs[sensor]['selected_bands']).astype('int')] for sensor in sensor_specs}
         self.projection_indices = {
             sensor_specs[sensor]['sensor_idx']: np.array(
                 [self.projection_conversion[i] for i in self.bands[sensor_specs[sensor]['sensor_idx']]]) for sensor in sensor_specs}

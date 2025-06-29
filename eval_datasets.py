@@ -136,7 +136,7 @@ class EvalDataset(torch.utils.data.Dataset):
         self.apply_georef = False
         self.scale = scale
         self.projection_conversion = {i: spectrum_specs[i]['projection_idx'] for i in spectrum_specs}
-        self.bands = np.array(sensor_specs['bands']).astype('int')
+        self.bands = np.array(sensor_specs['bands'])
         self.selected_band_indices =  np.array(sensor_specs['selected_bands']).astype('int')
         self.projection_indices = np.array([self.projection_conversion[i] for i in self.bands[self.selected_band_indices]])
         self.normalize_standardize = ImageNormalizeStandardize(sensor_specs)
