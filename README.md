@@ -11,6 +11,7 @@
 [![Website](https://img.shields.io/badge/website-blue?logo=google-chrome)](https://gsumbul.github.io/SMARTIES/)
 
 **News:**
+- [08/07/2025] SMARTIES can be used as a standalone model with a single line of code within Hugging Face transformer interface! (See [our Jupyter notebook](SMARTIES_huggingface.ipynb))
 - [26/06/2025] SMARTIES has been accepted to [International Conference on Computer Vision (ICCV) 2025](https://iccv.thecvf.com/) 🎉
 - [25/06/2025] [arXiv pre-print](https://arxiv.org/abs/2506.19585) and [model weights](https://huggingface.co/collections/gsumbul/smarties-685888bb5ecded3f802cc945) are out!
 
@@ -155,7 +156,16 @@ Most of the results reported in the SMARTIES paper are reproducible using the pr
 
 ## 🧩 Using SMARTIES
 
-SMARTIES is designed to be flexible and can be easily adapted to new datasets and sensors. A Jupyter notebook will be provided soon how to use pretrained model weights independently from this codebase. To use SMARTIES with a new dataset within this codebase, follow these steps:
+SMARTIES is designed to be flexible and can be easily adapted to new datasets and sensors. You can easily use SMARTIES with a single line of code with Hugging Face transformer interface:
+```python
+model = transformers.AutoModel.from_pretrained(
+    "gsumbul/SMARTIES-v1-ViT-B",
+    trust_remote_code=True
+)
+```
+[A Jupyter notebook](SMARTIES_huggingface.ipynb) is provided to show in detail how to use pretrained model weights independently from this codebase. 
+
+To use SMARTIES with a new dataset within this codebase, follow the steps below:
 
 1. **Create a Data Loader**
    - Use the `SmartiesVisionTransformer` model in `models_smarties_vit.py`.
